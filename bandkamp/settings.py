@@ -96,7 +96,7 @@ WSGI_APPLICATION = "bandkamp.wsgi.application"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 
-SECRET_KEY = os.getenv('SECRET_KEY', get_random_secret_key())
+SECRET_KEY = os.getenv("SECRET_KEY", get_random_secret_key())
 
 DATABASES = {
     "default": {
@@ -110,11 +110,11 @@ DATABASES = {
 }
 
 if os.getenv("DATABASE_URL"):
-   DATABASES['default'] = dj_database_url.config()
-   DEBUG = False
+    DATABASES["default"] = dj_database_url.config()
+    DEBUG = False
 
-STATICFILES_DIRS = os.path.join(BASE_DIR),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATICFILES_DIRS = (os.path.join(BASE_DIR),)
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build", "static")
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -170,8 +170,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = "users.User"
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Bandkamp API',
-    'DESCRIPTION': 'Kenzie Academy course backend project',
-    'VERSION': '1.0.0',
-    'SERVE_INCLUDE_SCHEMA': False,
+    "TITLE": "Bandkamp API",
+    "DESCRIPTION": "Kenzie Academy course backend project",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
 }
