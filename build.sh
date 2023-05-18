@@ -5,7 +5,7 @@
 
 
 echo "Building the project..."
-python3.9 -m pip install -r requirements.txt
+python3.11.0 -m pip install -r requirements.txt
 
 
 echo "Make Migrations"
