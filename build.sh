@@ -14,7 +14,7 @@ python manage.py migrate --noinput
 
 
 echo "Collect Static..."
-python3.9 manage.py collectstatic --no-input --clear
+python manage.py collectstatic --no-input --clear
 
 
 echo "BUILD END"
